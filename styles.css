@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-left: 30px;
+}
+
+.title {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; 
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.country-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.country-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.country-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.country-card h2 {
+    margin: 10px 0;
+    font-size: 1.25em;
+}
+
+.country-card p {
+    margin: 5px 0;
+    font-size: 1em;
+}
+
+#filter {
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#countryInput {
+    border: none;
+    outline: none;
+    padding: 10px;
+    flex: 1;
+}
+
+#searchButton {
+    background-color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .title, .header-container, .search-container {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .country-card {
+        padding: 15px;
+    }
+}
